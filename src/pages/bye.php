@@ -7,6 +7,5 @@ use Symfony\Component\HttpFoundation\Response;
 
 $request = Request::createFromGlobals();
 
-
 $response = new Response('Goodbye');
 $response->send();
