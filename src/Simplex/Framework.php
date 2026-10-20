@@ -3,17 +3,18 @@ namespace Simplex;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpKernel\Controller\ArgumentResolver;
-use Symfony\Component\HttpKernel\Controller\ControllerResolver;
+use Symfony\Component\HttpKernel\Controller\ArgumentResolverInterface;
+use Symfony\Component\HttpKernel\Controller\ControllerResolverInterface;
 use Symfony\Component\Routing\Exception\ResourceNotFoundException;
 use Symfony\Component\Routing\Matcher\UrlMatcher;
+use Symfony\Component\Routing\Matcher\UrlMatcherInterface;
 
 class Framework
 {
     public function __construct(
-        private UrlMatcher $matcher,
-        private ControllerResolver $controllerResolver,
-        private ArgumentResolver $argumentResolver,
+        private UrlMatcherInterface $matcher,
+        private ControllerResolverInterface $controllerResolver,
+        private ArgumentResolverInterface $argumentResolver,
     ) {
     }
 
