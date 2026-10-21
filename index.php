@@ -1,5 +1,7 @@
 <?php
 
+use Symfony\Component\HttpFoundation\Response;
+
 require_once __DIR__.'/init.php';
 
 $name = $request->query->get('name', 'World');
