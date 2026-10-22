@@ -19,9 +19,5 @@ class LeapYearController
 
         $response->setTtl(10);
         return $response;
-
-        var_dump($year);
-        exit;
-
     }
 }
